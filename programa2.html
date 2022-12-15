@@ -1,0 +1,30 @@
+<canvas width="600" height="400"> </canvas>
+<script>
+
+	function desenhaQuadradoVerde(x, y) {
+
+		var tela = document.querySelector('canvas');
+		var pincel = tela.getContext('2d');
+
+		pincel.fillStyle = 'green';
+		pincel.fillRect(x,y,50,50);
+		pincel.fillStroke = 'black';
+		pincel.strokeRect(x,y,50,50);
+	}
+	
+	/*utilizamos as duas estruturas de repetição possíveis para conseguir um mesmo resultado, com foco organizacional para o nosso código*/
+	
+	/*
+	var x = 0;
+
+	while(x < 600) {
+	desenhaQuadradoVerde(x, 0);
+	x = x + 50;
+	
+	}
+	*/
+
+	for (var x = 0; x < 600; x = x + 50){
+	desenhaQuadradoVerde(x, 0);
+	}
+</script>
